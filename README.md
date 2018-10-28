@@ -36,3 +36,17 @@ Command: MOVE
 Command: REPORT
 3,3,NORTH
 ```
+## Build and run instructions
+
+- build 
+```
+./gradlew build
+```
+- package 
+```
+jar: ./gradlew jar
+```
+- run
+```
+java -jar /build/libs/toy-robot-simulator-1.0.jar
+```
