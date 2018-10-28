@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+}
+
+group 'co.uk.redpixel.simulator'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}@pom"
+    testCompile "org.spockframework:spock-core:${spockVersion}"
+}
+
+lombok {
+    version = "$lombokVersion"
+    sha256 = ""
+}
+
+mainClassName = 'co.uk.redpixel.simulator.Application'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'co.uk.redpixel.simulator.Application'
+    }
+}
